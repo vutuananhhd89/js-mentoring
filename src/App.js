@@ -1,4 +1,6 @@
 import './App.css';
+import orgChart from './org-chart.png';
+import React, {useState} from "react";
 
 function Header(props){
   return (
@@ -11,9 +13,12 @@ function Header(props){
 function Body(props){
   return (
     <section>
+      <img src={orgChart} alt="PMI Vietnam Chapter Org Chart" height="200"/>
       <p>Connecting PM community in {props.country}</p>
       <ul>
-        {props.divisions.map((division) => (<li>{division}</li>))}
+        {props.divisions.map((division) => (
+          <li key={division.id}>{division.title}</li>)
+        )}
       </ul>
     </section>
   );
@@ -22,10 +27,11 @@ function Body(props){
 const divisions = [
   "Membership",
   "Outreach",
-  "Tech"
+  "Tech",
+  "Volunteer"
 ];
 
-
+const divisionObjects = divisions.map((division, i) => ({id: i, title: division}));
 
 function Footer(props){
   return (
@@ -35,13 +41,40 @@ function Footer(props){
   );
 }
 
-function App() {
+function SecretMessage(){
   return (
-    <div>
-      <Header country="Indonesia" />
-      <Body country="Indonesia" divisions={divisions}/>
+    <h3>Secret Message for Authorized user</h3>
+  );
+}
+
+function RegularMessage(){
+  return (
+    <h3>Regular Message</h3>
+  );
+}
+
+function ChapterState(){
+  const [chapterState, setChapterState] = useState("Potential");
+
+  return (
+    <>
+      <div>Chapter State is {chapterState}</div>
+      <button onClick={() => setChapterState("Newly Formed")}>Newly Formed</button>
+      <button onClick={() => setChapterState("Potential")}>Potential</button>
+      <button onClick={() => setChapterState("Official")}>Official</button>
+    </>
+  );
+}
+
+function App(props) {
+  return (
+    <>
+      <Header country="Vietnam" />
+      <Body country="Vietnam" divisions={divisionObjects}/>
       <Footer year= {new Date().getFullYear()}/>
-    </div>
+      {props.Authorized ? <SecretMessage /> : <RegularMessage />}
+      <ChapterState />
+    </>
   );
 }
 
