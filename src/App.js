@@ -1,7 +1,7 @@
 import './App.css';
 import orgChart from './org-chart.png';
 import React, {useState, useEffect, useReducer} from "react";
-import {Routes, Route, Link, Outlet} from "react-router-dom";
+import {Routes, Route, Link} from "react-router-dom";
 import {About, Events, Contact, Page404, Services, CompanyHistory, Location} from "./pages";
 
 function Header(props){
