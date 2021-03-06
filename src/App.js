@@ -1,16 +1,16 @@
 import './App.css';
 import orgChart from './org-chart.png';
 import React, {useState, useEffect, useReducer} from "react";
-import {Routes, Route, Link} from "react-router-dom";
-import {About, Events, Contact, Page404, Services, CompanyHistory, Location} from "./pages";
+import {Routes, Route} from "react-router-dom";
 
-function Header(props){
-  return (
-    <header>
-      <h1> PMI {props.country} Chapter </h1>
-    </header>
-  );
-}
+import AboutPage from "./pages/About/AboutPage";
+import ContactPage from "./pages/Contact/ContactPage";
+import EventsPage from "./pages/Events/EventsPage";
+import Header from "./shared/Header";
+import Page404 from "./pages/Page404/Page404";
+import AboutServicesPage from "./pages/About/AboutServices/AboutServicesPage";
+import AboutHistoryPage from "./pages/About/AboutHistory/AboutHistoryPage";
+import AboutLocationsPage from "./pages/About/AboutLocations/AboutLocationsPage";
 
 function Body(props){
   return (
@@ -63,8 +63,7 @@ function SecretMessage({login}){
 
   return (
     <h3>Regular Message</h3>
-  );
-  
+  ); 
 }
 
 function ChapterState(){
@@ -87,7 +86,7 @@ function FollowChapter(){
   );
 
   return (
-    <p>
+    <>
       <h3>Do you want to follow us?</h3>
       <input 
         type="checkbox" 
@@ -95,26 +94,19 @@ function FollowChapter(){
         onChange={toggle} 
       />
       {follow ? "following" : "not following"}
-    </p>  
+    </>  
   );
-  
-  
 }
 
 function Home() {
   return (
     <>
-      <nav>
-        <Link to="about">About</Link>
-        <Link to="events">Events</Link>
-        <Link to="contact">Contact</Link>
-      </nav>
       <Header country="Vietnam" />
       <Body country="Vietnam" divisions={divisionObjects}/>
-      <Footer year= {new Date().getFullYear()}/>
       <SecretMessage login="vutuananhhd89"/>
       <ChapterState />
       <FollowChapter />
+      <Footer year= {new Date().getFullYear()}/>
     </>
   );
 }
@@ -124,13 +116,13 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/about" element={<About />} >
-          <Route path="services" element={<Services />} />
-          <Route path="history" element={<CompanyHistory />} />
-          <Route path="location" element={<Location />} />
+        <Route path="/about" element={<AboutPage />} >
+          <Route path="services" element={<AboutServicesPage />} />
+          <Route path="history" element={<AboutHistoryPage />} />
+          <Route path="location" element={<AboutLocationsPage />} />
         </Route>
-        <Route path="/events" element={<Events />}/>
-        <Route path="/contact" element={<Contact />}/>
+        <Route path="/events" element={<EventsPage />}/>
+        <Route path="/contact" element={<ContactPage />}/>
         <Route path="*" element={<Page404 />}/>
       </Routes>
     </div>
