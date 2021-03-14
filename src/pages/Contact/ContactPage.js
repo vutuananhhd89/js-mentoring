@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../../shared/Header";
+import Footer from "../../shared/Footer";
 
 function ContactPage(){
   return (
@@ -8,6 +9,7 @@ function ContactPage(){
       <h1>
         Contact
       </h1>
+      <Footer />
     </>
   );
 }

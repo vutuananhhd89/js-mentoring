@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useReducer} from "react";
 
 import Header from "../../shared/Header";
+import Footer from "../../shared/Footer";
 import orgChart from '../../org-chart.png';
 
 
@@ -26,14 +27,6 @@ const divisions = [
 ];
 
 const divisionObjects = divisions.map((division, i) => ({id: i, title: division}));
-
-function Footer(props){
-  return (
-    <footer>
-      <p>copyright {props.year}</p>
-    </footer>
-  );
-}
 
 function SecretMessage({login}){
   const [data, setData] = useState(null);
