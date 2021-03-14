@@ -4,7 +4,7 @@ import Header from "../../shared/Header";
 function ContactPage(){
   return (
     <>
-      <Header />
+      <Header country="Vietnam"/>
       <h1>
         Contact
       </h1>
