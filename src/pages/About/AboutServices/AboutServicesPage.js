@@ -6,7 +6,7 @@ function AboutServicesPage(){
   return (
     <>
       <Header />
-      <h1>Our Locations</h1>
+      <h1>Our services</h1>
       <Footer />
     </>
   );
