@@ -7,7 +7,7 @@ function AboutLocationsPage(){
     <>
       <Header />
       <h1>Our Locations</h1>
-      <Footer />
+      <Footer year="2021"/>
     </>
   );
 }

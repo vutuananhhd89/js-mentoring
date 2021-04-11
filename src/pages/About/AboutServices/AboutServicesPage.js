@@ -7,7 +7,7 @@ function AboutServicesPage(){
     <>
       <Header />
       <h1>Our services</h1>
-      <Footer />
+      <Footer year="2021"/>
     </>
   );
 }
