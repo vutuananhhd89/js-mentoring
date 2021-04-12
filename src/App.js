@@ -7,7 +7,6 @@ import ContactPage from "./pages/Contact/ContactPage";
 import EventsPage from "./pages/Events/EventsPage";
 import Home from "./pages/Home/HomePage";
 import Page404 from "./pages/Page404/Page404";
-import AboutLocationsPage from "./pages/About/AboutLocations/AboutLocationsPage";
 
 
 function App() {
