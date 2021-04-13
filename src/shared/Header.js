@@ -2,10 +2,10 @@ import React from "react";
 import './Header.css';
 
 
-function Header(props){
+function Header(){
   return (
     <>
-      <h1> PMI {props.country} Chapter </h1>
+      <h1> PMI Vietnam Chapter </h1>
       <div class="navbar">
         <a href="/">Home</a>
         <a href="/events">Events</a>

@@ -12,7 +12,7 @@ function EventPage(){
         time='Tuesday, 13-Apr-2021' 
         location='https://zoom.us/j/91686969624'
         description='We will share & discuss the updates of PMBOK v7'
-        />
+      />
       <Footer />
     </>
   );

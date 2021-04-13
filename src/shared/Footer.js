@@ -1,10 +1,10 @@
 import React from "react";
 
 
-function Footer(props){
+function Footer(){
   return (
     <footer>
-      <p>Copyright © {props.year}</p>
+      <p>Copyright © {new Date().getFullYear()}</p>
     </footer>
   );
 }
