@@ -7,6 +7,9 @@ function AboutLocationsPage(){
     <>
       <Header />
       <h1>Our Locations</h1>
+      <h2>PMI Vietnam Chapter</h2>
+      <h3>Hanoi:</h3>
+      <p>Up Coworking space, VPBank building, 19 Lang Ha</p>
       <Footer year="2021"/>
     </>
   );
