@@ -1,7 +1,7 @@
 import Header from "../../shared/Header";
 import Footer from "../../shared/Footer";
 import './HomePage.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Fragment } from "react";
 
 function EventItem(props){
