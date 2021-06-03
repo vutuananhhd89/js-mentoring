@@ -7,7 +7,10 @@ import ContactPage from "./pages/Contact/ContactPage";
 import EventsPage from "./pages/Events/EventsPage";
 import Home from "./pages/Home/HomePage";
 import Page404 from "./pages/Page404/Page404";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCheckSquare, faCoffee, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
 
+library.add(faCheckSquare, faCoffee, faCalendarAlt)
 
 function App() {
   return (

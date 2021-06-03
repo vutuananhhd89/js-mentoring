@@ -1,0 +1,22 @@
+.event-item {
+  position: static;
+}
+
+.event-body {
+  position: relative;
+  left: 90px;
+}
+
+.event-title {
+  color: blue;
+}
+
+.circle {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  background-color: orange;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+}
